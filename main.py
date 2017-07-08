@@ -7,6 +7,7 @@ __version__ = '1.0'
 from Polybius.Polybius import Polybius
 from Caesar.Caesar import Caesar
 from Affine.Affine import Affine
+from Vigenere.Vigenere import Vigenere
 
 if __name__ == "__main__":
 
@@ -36,3 +37,11 @@ if __name__ == "__main__":
 
     decrypted_text = m_affine.decrypt(encrypted_text)
     print("Decrypted text (Affine: y=%dx + %d): %s " % (m_a, m_b, decrypted_text))
+
+    m_key_word = "batuhan"
+    m_vigenere = Vigenere(m_key_word)
+    encrypted_text = m_vigenere.encrypt(message)
+    print("Encrypted text (Vigenere - key_word: %s): %s " % (m_key_word, encrypted_text))
+
+    decrypted_text = m_vigenere.decrypt(encrypted_text)
+    print("Decrypted text (Vigenere - key_word: %s): %s " % (m_key_word, decrypted_text))
