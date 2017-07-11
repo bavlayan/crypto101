@@ -4,10 +4,10 @@
 __author__  = 'Batuhan AVLAYAN - b.avlayan@gmail.com'
 __version__ = '1.0'
 
-from Polybius.Polybius import Polybius
-from Caesar.Caesar import Caesar
-from Affine.Affine import Affine
-from Vigenere.Vigenere import Vigenere
+from Polybius import Polybius
+from Caesar import Caesar
+from Affine import Affine
+from Vigenere import Vigenere
 
 if __name__ == "__main__":
 
