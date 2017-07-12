@@ -8,3 +8,4 @@ Algorithm | Description
 [Playfair](Playfair) | Description will be added
 [Polybius](Polybius) | Description will be added
 [Vigenere](Vigenere) | Description will be added
+[Bifid](Bifid) | Description will be added
