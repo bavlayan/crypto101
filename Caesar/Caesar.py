@@ -13,9 +13,9 @@ class Caesar:
         self.__key = abs(self.__key)
         return self.__run_caesar_algorithm(plain_text)
     
-    def decrypt(self, chiper_text):
+    def decrypt(self, cipher_text):
         self.__key = -self.__key
-        return self.__run_caesar_algorithm(chiper_text)
+        return self.__run_caesar_algorithm(cipher_text)
 
     def __run_caesar_algorithm(self, m_text):
         m_text = m_text.lower()

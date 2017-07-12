@@ -10,32 +10,32 @@ class Affine:
         self.__b = b
         self.__getInverseOfa()
 
-    def __getChiperIndexOfLetter(self, letter):
+    def __getCipherIndexOfLetter(self, letter):
         if letter in self.__letters:
             index = self.__letters.index(letter)
-            chiper_index = (self.__a * index  + self.__b) % len(self.__letters)
-            return chiper_index
+            cipher_index = (self.__a * index  + self.__b) % len(self.__letters)
+            return cipher_index
 
-    def __getPlainIndexOfLetter(self, chiper_letter, inverse_of_a):
-        if chiper_letter in self.__letters:
-            index = self.__letters.index(chiper_letter)
+    def __getPlainIndexOfLetter(self, cipher_letter, inverse_of_a):
+        if cipher_letter in self.__letters:
+            index = self.__letters.index(cipher_letter)
             plain_index = (inverse_of_a * (index - self.__b)) % len(self.__letters)
             return int(plain_index)
 
     def encrypt(self, plain_text):
         encrypted_text = ""
         for letter in plain_text:
-            chiper_index = self.__getChiperIndexOfLetter(letter)
-            if chiper_index is not None:
-                encrypted_text = encrypted_text + self.__letters[chiper_index]
+            cipher_index = self.__getCipherIndexOfLetter(letter)
+            if cipher_index is not None:
+                encrypted_text = encrypted_text + self.__letters[cipher_index]
             else:
                 encrypted_text = encrypted_text + " "
         return encrypted_text
 
-    def decrypt(self, chiper_text):
+    def decrypt(self, cipher_text):
         decrypted_text = ""
         inverse_of_a = self.__getInverseOfa()
-        for letter in chiper_text:
+        for letter in cipher_text:
             plain_index = self.__getPlainIndexOfLetter(letter, inverse_of_a)
             if plain_index is not None:
                 decrypted_text = decrypted_text + self.__letters[plain_index]

@@ -22,10 +22,10 @@ class Vigenere:
                 encrypted_text = encrypted_text + " "
         return encrypted_text
 
-    def decrypt(self, chiper_text):
+    def decrypt(self, cipher_text):
         decrypted_text = ""
         count = 0
-        for letter in (chiper_text):
+        for letter in (cipher_text):
             if letter in self.__letters:
                 new_index = (self.__getIndexOfLetter(letter) - self.__key_index[count]) % len(self.__letters)
                 decrypted_text = decrypted_text + self.__letters[new_index]

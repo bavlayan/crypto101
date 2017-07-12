@@ -24,12 +24,12 @@ class Polybius:
                 encrypted_text = encrypted_text + str(row) + str(column)
         return encrypted_text
 
-    def decrypt(self, chiper_text):
+    def decrypt(self, cipher_text):
         decrypted_text = ""
-        chiper_message = chiper_text.split(" ")
-        for chiper_word in chiper_message:
-            for i in range(0, len(chiper_word) - 1, 2):
-                decrypted_text = decrypted_text + self.__get_letterByIndex(chiper_word[i:i+2])
+        cipher_message = cipher_text.split(" ")
+        for cipher_word in cipher_message:
+            for i in range(0, len(cipher_word) - 1, 2):
+                decrypted_text = decrypted_text + self.__get_letterByIndex(cipher_word[i:i+2])
             decrypted_text = decrypted_text + " "
         return decrypted_text
 
