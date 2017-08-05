@@ -8,11 +8,19 @@ from Polybius import Polybius
 from Caesar import Caesar
 from Affine import Affine
 from Vigenere import Vigenere
+from Playfair import Playfair
 
 if __name__ == "__main__":
 
-    message = "batuhan avlayan"
+    message = "batuhanavlayan"
     print("Original text: %s " % (message))
+
+    m_playfair = Playfair()
+    encrypted_text = m_playfair.encrypt(message)
+    print("Encrypted text (Playfair): %s " % (encrypted_text))
+
+    decrypted_text = m_playfair.decrypt(encrypted_text)
+    print("Decrypted text (Playfair): %s " % (decrypted_text))
 
     m_polybius = Polybius()
     encrypted_text = m_polybius.encrypt(message)
