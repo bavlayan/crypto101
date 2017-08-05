@@ -1,1 +1,1 @@
-from Playfair import Playfair
+from Playfair.Playfair import Playfair

@@ -1,1 +1,1 @@
-from Polybius import Polybius
+from Polybius.Polybius import Polybius

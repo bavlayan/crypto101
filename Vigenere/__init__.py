@@ -1,1 +1,1 @@
-from Vigenere import Vigenere
+from Vigenere.Vigenere import Vigenere
